@@ -5,14 +5,12 @@ Rails.application.routes.draw do
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-   get 'posts/' => 'posts#index'
-   get 'posts/show'
-
-  
   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  	  
+      get '' => 'dashboards#index'
+      get 'posts/' => 'posts#index'
+      get 'posts/show'
       resources :products
       resources :pages
   end
