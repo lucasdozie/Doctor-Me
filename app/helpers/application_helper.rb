@@ -1,7 +1,7 @@
 module ApplicationHelper
 	def title
 		base_title = "Welcome to Doc & me"
-		if @title.empty?
+		if @title.nil?
 			base_title
 		else
 			"#{@title} | #{base_title}" 
