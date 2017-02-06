@@ -1,0 +1,16 @@
+<%= render 'admin/shared/dashboardHeader' %>
+<h1> Profile</h1>
+<h3>Personal Options</h3>
+
+<p>
+   <strong>Name: </strong> <%= @user.name %><br />
+   <strong>Email :</strong> <%= @user.email %><br />
+   <strong>Created Date:</strong> <%= @user.created_at %><br />
+</p>
+
+<p><%= @user.name %> is a ....</p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>
+<%= render 'admin/shared/dashboardFooter' %>

@@ -1,4 +1,24 @@
-<header class="static-header">
-	<div class="site-owner">DOCTOR & ME</div>
-	<div class="welcome-user">How are you doing, Lucas</div>
-</header>
+<section class="admin-dashboard-body">
+<%= stylesheet_link_tag 'admin-stylesheet', :media => 'all' %>
+	<header class="static-header">
+		<div class="site-owner">DOCTOR & ME</div>
+		<div class="welcome-user">
+			How are you doing, 
+			<div class="current-user">
+				<% if user_signed_in? %>
+				<span><%= current_user.name %></span>
+				<%= link_to "logout", destroy_user_session_path, :method => :delete %>
+				<% else %>
+				<%= link_to "login", new_user_session_path %>
+				<% end %>
+			</span>
+		</div>
+	</header>
+	<section class="content">
+		<section class="left-grid">
+			<%= render 'admin/shared/navmenu' %>
+		</section>
+		<section class="right-grid">
+		<% flash.each do |name, msg|%>
+	      <%= content_tag(:div, msg, class: "alert alert-info") %>
+	    <% end %>

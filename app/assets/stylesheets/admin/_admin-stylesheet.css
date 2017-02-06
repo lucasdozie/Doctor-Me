@@ -1,21 +1,18 @@
 .right-grid{max-width: 100%;float: left;position: relative;margin-left: 160px;padding: 20px 10px;
-box-sizing: border-box;width: 1120px;}
+box-sizing: border-box; width: 1100px;}
 h1{font-size: 25px;}
-.content-box{background-color: #fff; border:#f2f2f2;padding:10px; line-height: 20px;margin:20px 0;}
+.content{float:left;float: left;width: 100%;overflow: hidden;margin-top: 30px;}
+.content-box{background-color: #fff; border:#f2f2f2;padding:10px; line-height: 20px;margin:20px 0;width: 48%;margin-right: 2%;float: left;}
 .content-box h1{font-size: 20px; padding-bottom: 15px;}
 .admin-dashboard-body{float:left;width:100%;background-color: #f1f1f1;}
-.left-grid{
-		float: left;
-		width: 20%;background-color: #23282D;
-		color: #fff;position: fixed;
-		max-width: 160px;text-align: center;min-height: 100%;margin-top: 30px;
-	}
-.static-header{float: left;
-		width: 100%;position: relative;
-		background-color: #23282D;min-height: 30px;color: #dadada;padding: 0 20px;
-	}
+.left-grid{float: left;width: 20%;background-color: #23282D;color: #fff;position: fixed;max-width: 160px;text-align: center;min-height: 100%;}
+.static-header{float: left;width: 100%;position: fixed;z-index:999; background-color: #23282D;min-height: 30px;color: #dadada;padding: 0 20px;}
 .static-header .welcome-user{display: inline-block;float: right;line-height: 2em;}
 .static-header .site-owner{display: inline-block;float: ;left;line-height: 2em;}
 .nav_menu li{list-style: none; padding: 20px 0;}
 .nav_menu a{text-decoration: none;font-size: 20px; color:#92D0EE;}
 .nav_menu a:hover{color:#f1f1f1;}
+.current-user{display: inline-block;}
+table {width: 100%;max-width: 700px;margin: 20px 0;}
+tr{margin: 8px 0;}
+th{padding:10px;background-color: #000; color:#fff; margin: 5px;}

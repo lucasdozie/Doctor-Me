@@ -1,11 +1,14 @@
-<h1>Welcome <%= @pages %></h1>
-<section>
-	<p>This is a test</p>
-</section>
-
-<h1>Administration</h1>
-
+<%= render 'admin/shared/dashboardHeader' %>
+<h1>User <%= @pages %></h1>
+<h3>List of Users</h3>
+<table>
+	<tr><th>ID</th><th>NAME</th><th>EMAIL</th></tr>
+	<% @users.each do |user|%>
+	<tr><td><%= user.id%></td><td><%= user.name %></td><td><%= user.email%></td><td><%= link_to "Edit" %></td><td><%= link_to "Destroy" %></td></tr>
+	<% end %>
+</table>
 <ul>
   <li><%= link_to 'Manage Users' %></li>
   <li><%= link_to 'Manage Articles' %></li>
 </ul>
+<%= render 'admin/shared/dashboardFooter' %>
