@@ -1,13 +1,30 @@
 <%= render 'admin/shared/dashboardHeader' %>
+<div class="content-box content-box-inner">
 <h1>Edit User Profile</h1>
 <%= form_for @user, :url => {:action => 'update', :id => @user} do |f| %>
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.email_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true %>
   </div>
    <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+   <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_area :bio, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role, autofocus: true %>
+  </div>
+   <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.telephone_field :telephone, autofocus: true %>
   </div>
 
   <div class="field">
@@ -27,4 +44,7 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
+
+<%= link_to 'Back', {:action => 'list'} %>
+</div>
 <%= render 'admin/shared/dashboardFooter' %>

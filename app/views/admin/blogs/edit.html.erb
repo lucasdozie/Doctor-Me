@@ -1,0 +1,14 @@
+<%= render 'admin/shared/dashboardHeader' %>
+<h1 class="fa fa-file-text"><%= @title %></h1><span>manage users</span>
+<div class="content-box content-box-inner">
+  <div class="ct-header">
+    <h1><%= @title %></h1>
+  </div>
+  <div class="ct-body">
+  <%= form_for @blog, :url => {:action => 'update', :id => @blog} do |f| %>
+  <%= render "blog_form" %>
+  <% end %>
+  </div>
+  <%= link_to 'Back', {:action => 'index'} %>
+
+<%= render 'admin/shared/dashboardFooter' %>

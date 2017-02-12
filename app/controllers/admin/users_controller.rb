@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  before_action :authenticate_user!
   def list
   	@title = "Users"
   	@users = User.all
@@ -27,8 +28,8 @@ class Admin::UsersController < ApplicationController
   end
 
   def update
-  	@user = User.update_attributes(users_params)
-  	if @user.save
+  	@user = User.find(params[:id])
+  	if @user.update_attributes(users_params)
   		redirect_to :action => 'show', :id => @user
   	else
   		render :action => 'edit'
@@ -42,6 +43,6 @@ class Admin::UsersController < ApplicationController
 
   private
   def users_params
-  	params_require(:user).permit(:name, :email)
+  	params.require(:user).permit(:name, :email, :username, :role, :telephone, :bio, :password)
   end
 end

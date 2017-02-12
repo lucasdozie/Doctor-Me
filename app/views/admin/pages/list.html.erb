@@ -1,0 +1,37 @@
+<%= render 'admin/shared/dashboardHeader' %>
+<h1 class="fa fa-file-text"><%= @title %></h1>
+<div class="content-box content-box-inner top-content-box">
+	<div class="ct-header">
+		<h1><%= @title %></h1>
+		<span class="fa fa-plus c-new dir-right"><%= link_to "New", {:action => 'new'} %></span>
+	</div>
+	<div class="ct-body">
+		<span class="new-page">
+			<i class="fa fa-book" style="font-size:30px;"></i>
+			<%= link_to "Create Pages", {:action => 'new'} %>
+		</span>
+	</div>
+</div>
+<div class="content-box content-box-inner">
+	<div class="ct-header">
+		<h1><%= @title %></h1>
+		<span class="fa fa-plus c-new dir-right"><%= link_to "New", {:action => 'new'} %></span>
+	</div>
+	<div class="ct-body">
+		<table>
+			<tr><th>Id</th><th>Title</th><th>body</th><th colspan="3"></th></tr>
+			<% @pages.each do |page|%>
+			<tr>
+				<td><%= link_to page.id, {:action => 'show', :id => page.id} %></td>
+				<td><%= link_to page.title, {:action => 'show', :id => page.id} %></td>
+				<td><%= page.body %></td>
+				<td><%= link_to 'show', {:action => 'show', :id => page.id} %></td>
+				<td><%= link_to "Edit", {:action => 'edit', :id => page.id } %></td>
+				<td><%= link_to "Destroy", {:action => 'delete', :id => page.id }, :confirm => "Are you sure want to delete?" %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
+
+<%= render 'admin/shared/dashboardFooter' %>

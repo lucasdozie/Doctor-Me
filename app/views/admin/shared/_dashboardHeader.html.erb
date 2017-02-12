@@ -1,7 +1,7 @@
 <section class="admin-dashboard-body">
 <%= stylesheet_link_tag 'admin-stylesheet', :media => 'all' %>
 	<header class="static-header">
-		<div class="site-owner">DOCTOR & ME</div>
+		<div class="site-owner">DOCTOR & ME</div><i class="fa fa-align-justify humburger-menu"></i>
 		<div class="welcome-user">
 			How are you doing, 
 			<div class="current-user">
@@ -16,6 +16,18 @@
 	</header>
 	<section class="content">
 		<section class="left-grid">
+			<div class="sidebar-top-panel">
+				<div class="current_user">
+					<%= image_tag('male.png', alt: 'user avatar', size: '40x40', class: 'user_avatar')%>
+					<div class="admin-username">
+						<p class=''><%= current_user.name %></p>
+						<span class="fa fa-circle">Online</span>
+					</div>
+				</div>
+				<form class="sidebar-form" action="/search" method="POST">
+					<input type="search" placeholder="Search...">
+				</form>
+			</div>
 			<%= render 'admin/shared/navmenu' %>
 		</section>
 		<section class="right-grid">

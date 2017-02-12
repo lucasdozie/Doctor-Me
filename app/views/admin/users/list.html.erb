@@ -1,11 +1,35 @@
 <%= render 'admin/shared/dashboardHeader' %>
-<h1>User <%= @pages %></h1>
-<h3>List of Users</h3>
-<table>
-	<tr><th>ID</th><th>NAME</th><th>EMAIL</th></tr>
-	<% @users.each do |user|%>
-	<tr><td><%= link_to user.id, {:action => 'show', :id => user.id} %></td><td><%= link_to user.name, {:action => 'show', :id => user.id} %></td><td><%= user.email%></td><td><%= user.password%></td><td><%= link_to "Edit", {:action => 'edit', :id => user.id } %></td><td><%= link_to "Destroy", {:action => 'delete', :id => user.id }, :confirm => "Are you sure want to delete?" %></td></tr>
-	<% end %>
-</table>
+<h1 class="fa fa-file-text"><%= @title %></h1><span>manage users</span>
+<div class="content-box content-box-inner">
+	<div class="ct-header">
+		<h1><%= @title %></h1>
+		<span class="fa fa-plus c-new dir-right"><%= link_to "New", {:action => 'new'} %></span>
+	</div>
+	<div class="ct-body">
+		<span class="new-user"><%= link_to "Create User", {:action => 'new'} %></span>
+	</div>
+</div>
+<div class="content-box content-box-inner top-content-box">
+	<div class="ct-header">
+		<h1><%= @title %></h1>
+		<span class="fa fa-plus c-new dir-right"><%= link_to "New", {:action => 'new'} %></span>
+	</div>
+	<div class="ct-body">
+		<table>
+			<tr><th>Username</th><th>Name</th><th>Email</th><th>Telephone</th><th colspan="3"></th></tr>
+			<% @users.each do |user|%>
+			<tr>
+				<td><%= link_to user.username, {:action => 'show', :id => user.id} %></td>
+				<td><%= link_to user.name, {:action => 'show', :id => user.id} %></td>
+				<td><%= user.email %></td>
+				<td><%= user.telephone %></td>
+				<td><%= link_to 'show', {:action => 'show', :id => user.id} %></td>
+				<td><%= link_to "Edit", {:action => 'edit', :id => user.id } %></td>
+				<td><%= link_to "Destroy", {:action => 'delete', :id => user.id }, :confirm => "Are you sure want to delete?" %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+</div>
 
 <%= render 'admin/shared/dashboardFooter' %>

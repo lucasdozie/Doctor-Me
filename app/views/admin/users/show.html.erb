@@ -1,16 +1,39 @@
 <%= render 'admin/shared/dashboardHeader' %>
-<h1> Profile</h1>
-<h3>Personal Options</h3>
+<h1 class="fa fa-file-text"><%= @title %></h1><span>manage users</span>
+<div class="col-md-3">
+  <div class="content-box content-box-inner">
+	<div class="ct-header">
+		<h1>User Profile</h1>
+		<h3>Personal details</h3>
+	</div>
+	<div class="ct-body">
+		<%= image_tag('male.png', alt: 'user avatar', size: '200x200', class: 'user_avatar')%>
+		<p>
+		   <strong>Username: </strong> <%= @user.username %><br />
+		   <strong>Name: </strong> <%= @user.name %><br />
+		   <strong>Email :</strong> <%= @user.email %><br />
+		   <strong>Tel :</strong> <%= @user.telephone %><br />
+		   <strong>Role :</strong> <%= @user.role %><br />
+		   <strong>Created Date:</strong> <%= @user.created_at %><br />
+		</p>
 
-<p>
-   <strong>Name: </strong> <%= @user.name %><br />
-   <strong>Email :</strong> <%= @user.email %><br />
-   <strong>Created Date:</strong> <%= @user.created_at %><br />
-</p>
+		<p><%= @user.bio %></p>
 
-<p><%= @user.name %> is a ....</p>
+		<hr />
 
-<hr />
-
-<%= link_to 'Back', {:action => 'list'} %>
+		<%= link_to 'Back', {:action => 'list'} %>
+	</div>
+  </div>
+</div>
+<div class="col-md-9">
+	<div class="content-box content-box-inner">
+		<div class="ct-header">
+		 	<h1>User setting</h1>
+		</div>
+		<div class="ct-body">
+			<p>Lorem ipsum Lorem ipsumLorem ipsum Lorem ipsumLoremLorem ipsum v Lorem ipsumLorem ipsumLorem Lorem ipsum</p>
+		</div>
+	</div>
+</div>
 <%= render 'admin/shared/dashboardFooter' %>
+

@@ -21,9 +21,17 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+#gem devise for user authentecation
 gem 'devise'
 
+
 gem 'bootstrap-sass'
+
+# use font awesome
+gem 'font-awesome-rails'
+
+#ckeditor for blog section
+gem "ckeditor"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
