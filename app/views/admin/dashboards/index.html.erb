@@ -1,5 +1,74 @@
 <%= render 'admin/shared/dashboardHeader' %>
 		<h1>Dashboard</h1>
+		<section class="content">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fa fa-cog"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Pages</span>
+                        <span class="info-box-number">3</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-user"><i class="fa fa-user"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Users</span>
+                        <span class="info-box-number">4</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-book"><i class="fa fa-book"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Posts</span>
+                        <span class="info-box-number">2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-book"><i class="fa fa-google-plus"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Event</span>
+                        <span class="info-box-number">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+	        <div class="content-box content-box-inner">
+				<div class="ct-header">
+					<h1><%= "Calender" %></h1>
+				</div>
+				<div class="ct-body">
+					<%= month_calendar do |date| %>
+					  <%= date %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="content-box content-box-inner">
+				<div class="ct-header">
+					<h1><%= "Recent Activity" %></h1><span>Recently Published</span>
+				</div>
+				<div class="ct-body">
+					<ul>
+						<li>Dec 1st 2016, 4:13 am EFL Cup: Man Utd and </li>
+						<li>Liverpool kept apart in semi-finals</li>
+						<li>Dec 1st 2016, 3:49 am Trending Video</li>
+		    			<li>Nov 23rd 2016, 6:33 pm Listen live</li>
+		    			<li>Nov 22nd 2016, 5:06 am Bigsean is Back</li>
+		    			<li>Nov 22nd 2016, 3:01 am 8 Nigerian Music Stars That Have Spent Time in Police Custody</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
 		<div class="content-box">
 			<h1>WELCOME TO Dlux</h1>
 			<p>What will you like to do?</p>
@@ -9,23 +78,7 @@
 			<p>LoadError: cannot load such file — bcrypt_ext has been resolved in version 2.0</p>
 		</div>
 		
-		<div class="content-box">
-			<h1>At a Glance</h1>
-			<p>What will you like to do?</p>
-		</div>
-
-		<div class="content-box"> 
-			<h1>Recent Activity</h1>
-			<span>Recently Published</span>
-			<ul>
-				<li>Dec 1st 2016, 4:13 am EFL Cup: Man Utd and </li>
-				<li>Liverpool kept apart in semi-finals</li>
-				<li>Dec 1st 2016, 3:49 am Trending Video</li>
-    <li>Nov 23rd 2016, 6:33 pm Listen live</li>
-    <li>Nov 22nd 2016, 5:06 am Bigsean is Back</li>
-    <li>Nov 22nd 2016, 3:01 am 8 Nigerian Music Stars That Have Spent Time in Police Custody</li>
-			</ul>
-		</div>
+		
 <%= render 'admin/shared/dashboardFooter' %>
 
 

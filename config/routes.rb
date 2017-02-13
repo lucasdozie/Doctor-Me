@@ -18,7 +18,6 @@ Rails.application.routes.draw do
     get '' => 'dashboards#index'
     get 'posts/' => 'posts#index'
     get 'posts/show'
-    resources :products
     get 'pages' => 'pages#list'
     get 'pages/delete'
     resources :pages

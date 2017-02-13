@@ -3,3 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.info-box{background-color: #fff;max-width: 180px;border-radius: 3px;float:left;}
+.info-box-icon{display: inline-block;padding: 18px;color: #fff;font-size: 35px;float:left}
+.bg-aqua{background-color: #008000;}.bg-user{background-color: #800000;}.bg-book{background-color: #005780;}
+.info-box-content{display: inline;float:left;font-size: 18px;padding: 20px 10px;}
+.info-box-number{font-weight: 700;display: block;}

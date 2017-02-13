@@ -33,6 +33,8 @@ gem 'font-awesome-rails'
 #ckeditor for blog section
 gem "ckeditor"
 
+gem "simple_calendar", "~> 2.0"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
