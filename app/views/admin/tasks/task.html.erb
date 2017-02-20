@@ -1,0 +1,97 @@
+<%= render 'admin/shared/dashboardHeader' %>
+	<div class="box-wrapper">
+			<div class="col-md-4">
+				<div class="tasks ibox-content">
+					<h3>Todo - list</h3>
+					<p><i class="fa fa-hand-o-up"></i>Drag task between list</p>
+					<%= form_for @new_task, :url => {:action => "create", :id => @new_task } do |f|%>
+					<div class="input-group-btn">
+						<% if @new_task.errors.any? %>
+		      			<ul>
+		      			  <%= @new_task.errors.full_messages.each do |msg| %>
+		      			    <li><%= msg %></li>
+		      			  <% end %>
+		      			</ul>
+		    			<% end %>
+		    			<%= f.text_field :Todo, :class => "input input-sm form-control", :require => "required" %>
+		    			<span class="input-group-btn">
+		    			<%= content_tag :button, :type => "submit", :class => "btn btn-sm btn-white" do%>
+		    			<i class="fa fa-plus"></i>
+							Add Task
+		    			<%end%>
+		    			</span>
+		    		</div>
+					<% end %>
+					<ul id="todo">
+					<% @Tasks.each do |task|%>
+						<li class="draggable">
+							<%= task.Todo %>
+							<div class="time-duration">
+								<i class="fa fa-clock-o"></i>
+								<%if(task.created_at)%>
+								 <%= task.created_at %>
+								 <%else%>
+								 13 Feb, 2017 02:25 PM
+								 <%end%>
+							</div>
+							<%= content_tag :a, href: "/admin/tasks/delete?id=#{task.id}", :class => "task_delete", :confirm => "Are you sure want to delete?" do%>
+				    			<i class="fa fa-trash"></i>
+				    		<%end%>
+							<% link_to "Destroy", {:action => 'delete', :id => task.id}, :class => "fa fa-trash", data:{confirm: "Are you sure want to delete?"} %>
+						
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="tasks ibox-content">
+					<h3>In Progress</h3>
+					<p><i class="fa fa-hand-o-up"></i>Drag task between list</p>
+					<ul id="todo">
+					<% @Tasks_sip.each do |sip|%>
+						<li class="draggable">
+							<%= sip.Todo %>
+							<div class="time-duration">
+								<i class="fa fa-clock-o"></i>
+								 <%if(sip.created_at)%>
+								 <%= sip.created_at %>
+								 <%else%>
+								 13 Feb, 2017 02:25 PM
+								 <%end%>
+							</div>
+							<%@id = sip.id %>
+							<%= content_tag :a, href: "/admin/tasks/delete?id=#{@id}", :class => "task_delete", :confirm => "Are you sure want to delete?" do%>
+				    			<i class="fa fa-trash"></i>
+				    		<%end%>
+						</li>
+					<%end%>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="tasks ibox-content">
+					<h3>Completed</h3>
+					<p><i class="fa fa-hand-o-up"></i>Drag task between list</p>
+					<ul id="todo">
+					<% @Tasks_completed.each do |completed| %>
+						<li>
+							<%= completed.Todo%>
+							<div class="time-duration">
+								<i class="fa fa-clock-o"></i>
+								<%if(completed.created_at)%>
+								 <%= completed.created_at %>
+								 <%else%>
+								 13 Feb, 2017 02:25 PM
+								 <%end%>
+							</div>	
+							<%= content_tag :a, href: "/admin/tasks/delete?id=#{completed.id}", :class => "task_delete", :confirm => "Are you sure want to delete?" do%>
+				    			<i class="fa fa-trash"></i>
+				    		<%end%>					
+						</li>
+						<% end %>
+					</ul>
+				</div>
+			</div>
+		</div>
+<%= render 'admin/shared/dashboardFooter' %>

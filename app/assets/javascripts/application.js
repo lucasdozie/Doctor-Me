@@ -16,3 +16,9 @@
 //= require bootstrap-sprockets
 //= require ckeditor/init
 //= require_tree.
+
+jQuery(
+	function(){ 
+		jQuery(".draggable").draggable(); 
+	}
+);

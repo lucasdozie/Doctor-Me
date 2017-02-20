@@ -27,6 +27,10 @@
 				<form class="sidebar-form" action="/search" method="POST">
 					<input type="search" placeholder="Search...">
 				</form>
+				<%= form_tag(admin_users_path, :method => "get", id: "search-form", :class => "sidebar-form") do %>
+				    <%= text_field_tag :search, params[:search], placeholder: "Search..." %>
+				    <%= submit_tag "Search", :name => nil %>
+				<% end %>
 			</div>
 			<%= render 'admin/shared/navmenu' %>
 		</section>
@@ -34,3 +38,5 @@
 		<% flash.each do |name, msg|%>
 	      <%= content_tag(:div, msg, class: "alert alert-info") %>
 	    <% end %>
+	    <h1 class="main-h1 fa fa-file-text"><%= @title %></h1>
+		<span><%= "manage #{@title}" %></span>

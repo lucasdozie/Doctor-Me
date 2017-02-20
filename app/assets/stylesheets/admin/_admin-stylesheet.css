@@ -1,4 +1,4 @@
-.right-grid{max-width: 100%;float: left;position: relative;margin-left: 160px;padding: 20px;height: 100%;min-height: 100%}
+.right-grid{max-width: 100%;width:87%;float: left;position: relative;margin-left: 160px;padding: 20px 0;height: 100%;min-height: 100%}
 h1{font-size: 25px;}
 .content{float:left;float: left;width: 100%;overflow: hidden;margin-top: 30px;}
 .content-box{background-color: #fff; border:#f2f2f2;padding:10px; line-height: 20px;margin:20px 0;width: 48%;margin-right: 2%;float: left;}
@@ -33,10 +33,22 @@ tr:nth-of-type(2n+1){margin: 8px 0;background: #f1f1f1}
 
 .fa:before{left: -5px; position: relative;}
 .fa-circle::before { content: "\f111";  color: green;}
-
 .devise-head{/*background-color: #224555;*/background-color: #D9EDF7; padding: 45px 0; color:#fff;height: 100%;}
-.devise-head .devise-wrapper{max-width: 300px;margin: 8% auto;float: none;border: 1px solid #d2e5ef;text-align: center;padding: 15px;background-color: #9BBFD1;border-radius: 5px;left: calc(100% - 250px;position: relative;top: calc(100% - 250px);}
+.devise-head .devise-wrapper{max-width: 300px;margin: 2% auto;float: none;border: 1px solid #d2e5ef;text-align: center;padding: 15px;background-color: #9BBFD1;border-radius: 5px;/*left: calc(100% - 750px); top: calc(100% - 250px);*/position: relative;}
 .content-box img{max-width: 100%;}
 .top-content-box .ct-body{text-align: center;}
 .top-content-box span{display: inline-block;padding: 20px;}
 
+.ibox-content {background-color: #ffffff; color: inherit; padding: 15px 20px 20px 20px; border-color: #e7eaec;  border-image: none;
+    border-style: solid solid none; border-width: 1px 0px;min-height: 400px;}
+.ibox-content li{background: #FAFAFB;border: 1px solid #e7eaec;border-left: 3px solid #86211d;position: relative;margin: 0px 0 10px 0;padding: 10px;border-radius: 2px;position: relative;
+z-index: 999;}
+.ibox-content li:nth-of-type(2n + 1){border-left: 3px solid #1ab394;}
+.ibox-content input[type="text"]{float: left;width: 203px;margin-top: 0;}
+.box-wrapper{width: 100%;float: left;padding: 20px 0;}
+.ibox-content h3{font-size: 22px;margin: 20px 0 10px;}
+.ibox-content form{padding: 10px 0 5px;}
+.time-duration{margin-top: 8px;font-size: 12px;}
+.ibox-content.fa::before { left: 0px;}
+#todo{padding-top: 10px;}
+.task_delete{color: red;position: absolute;bottom: 10px;right: 6px;font-size: 18px;}

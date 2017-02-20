@@ -25,3 +25,4 @@ footer{position:relative;float:left; width:87%;max-width: 100%; margin-top:30px;
 .humburger-menu{position: relative;left: 20px;font-size: 22px;display: inline-block;padding: 5px 0;}
 .c-new{background-color: #356;padding: 5px;border-radius: 2px;}
 .c-new a{color:#fff;}
+.main-h1{font-size: 25px !important;padding-left: 20px;}

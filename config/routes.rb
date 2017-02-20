@@ -20,6 +20,9 @@ Rails.application.routes.draw do
     get 'posts/show'
     get 'pages' => 'pages#list'
     get 'pages/delete'
+    get 'tasks' => 'tasks#task'
+    post 'tasks/create'
+    get 'tasks/delete'
     resources :pages
     resources :blogs
 

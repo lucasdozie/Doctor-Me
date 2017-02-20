@@ -1,13 +1,12 @@
 <%= render 'admin/shared/dashboardHeader' %>
-		<h1>Dashboard</h1>
 		<section class="content">
-        <div class="row">
+        <div>
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <span class="info-box-icon bg-aqua"><i class="fa fa-cog"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Pages</span>
-                        <span class="info-box-number">3</span>
+                        <span class="info-box-number"><%= @page_count %></span>
                     </div>
                 </div>
             </div>
@@ -16,7 +15,7 @@
                     <span class="info-box-icon bg-user"><i class="fa fa-user"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Users</span>
-                        <span class="info-box-number">4</span>
+                        <span class="info-box-number"><%= @user_count %></span>
                     </div>
                 </div>
             </div>
@@ -25,13 +24,22 @@
                     <span class="info-box-icon bg-book"><i class="fa fa-book"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Posts</span>
-                        <span class="info-box-number">2</span>
+                        <span class="info-box-number"><%= @post_count %></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="info-box">
-                    <span class="info-box-icon bg-book"><i class="fa fa-google-plus"></i></span>
+                    <span class="info-box-icon bg-book"><i class="fa fa-park"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Task</span>
+                        <span class="info-box-number"><%= Task.count %></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-book"><i class="fa fa-calendar"></i></span>
                     <div class="info-box-content">
                         <span class="info-box-text">Event</span>
                         <span class="info-box-number">0</span>
