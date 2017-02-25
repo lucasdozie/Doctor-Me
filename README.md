@@ -11,7 +11,11 @@ Dlux is a Content management system built with Ruby on Rails.
 
 4. $ cd my-folder
 
-5. $ make
+5. bundle
+
+6. rails db:migrate
+
+7. rails db:seed
 
 
 
